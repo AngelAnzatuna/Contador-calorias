@@ -12,7 +12,7 @@ function App() {
     localStorage.setItem('activities', JSON.stringify(state.activities))
   }, [state.activities])
 
-  const canRestartApp = () => useMemo(() => state.activities.length, [state.activities])
+  const canRestartApp = useMemo(() => state.activities.length, [state.activities])
 
   return (
     <>
